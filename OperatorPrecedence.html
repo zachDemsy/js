@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Precedence </title>
+</head>
+
+<body>
+    <h2>Operator Precedence </h2>
+    <p id="d1"></p>
+    <script>
+        //multiplication precendece
+        document.getElementById("d1").innerHTML += '<h2>Multiplication precendece</h2>';
+        document.getElementById("d1").innerHTML += 100 + 50 * 3;
+        //With brakets 
+        document.getElementById("d1").innerHTML += '<h2>Multiplication precendece with brackets</h2>';
+        document.getElementById("d1").innerHTML += (100 + 50) * 3;
+        //same precendece
+        document.getElementById("d1").innerHTML += "<h2>Same precedece like / and * </h2><br>";
+        document.getElementById("d1").innerHTML += 100 / 50 * 3;
+    </script>
+</body>
+
+</html>

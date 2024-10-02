@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuctions</title>
+</head>
+
+<body>
+    <h2>JavaScript Functions</h2>
+    <ol>
+        <li>A simple function</li>
+        <li>Function with argument</li>
+        <li>Function with 2 argument</li>
+        <li>Function with return value</li>
+        <li>predefine function of fahrenheit to Celsius</li>
+        <li>function without argument ()</li>
+    </ol>
+    <p>click on the button the perform differnt functions</p>
+    <div id="demo">Default</div>
+    <button onclick="Function1()">A simple Function</button>
+    <button onclick="Function2('Harry Potter','Wizard')">Try it</button>
+    <form>
+        <input type="button" onclick="function3('Good Morning!')" value="In the Morning">
+        <input type="button" onclick="function3('Good Evening!')" value="In the Evening">
+    </form>
+    <p>predefine function of fahrenheit to Celsius</p>
+    <div id="demo2"></div>
+    <p>function without argument ()</p>
+    <div id="demo3"></div>
+    <script>
+        function Function1() {
+            document.getElementById('demo').innerHTML = "It is a simple Function";
+        }
+
+        function Function2(name, job) {
+            document.getElementById("demo").innerHTML = "Welcome " + name + ", the " + job + ".";
+        }
+
+        function function3(txt) {
+            document.getElementById('demo').innerHTML = txt;
+        }
+
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+
+        let value = toCelsius(77);
+        document.getElementById("demo2").innerHTML = value;
+
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+
+        let value1 = toCelsius;
+        document.getElementById("demo3").innerHTML += value;
+    </script>
+</body>
+
+</html>

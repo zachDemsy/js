@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects MEthods</title>
+</head>
+
+<body>
+    <h2>Object Methods or objects with functions</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        // Create an object
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            // Method
+            FullName: function() {
+                return this.firstName + " " + this.lastName + ".";
+            },
+            //Method 2
+            PersonInfo: function() {
+                return this.firstName + " " + this.lastName + " is " + this.age + " years old";
+            },
+            //Method 3
+            InfoWithDate: function() {
+                return (this.firstName + " " + this.lastName + " is " + this.age + " years old & Today date is ").toUpperCase() + Date();
+            }
+        };
+        // Accessing the methods
+        document.getElementById("demo").innerHTML += person.FullName() + " It is method First <br>";
+        document.getElementById("demo2").innerHTML += person.PersonInfo() + " It is method Second<br>";
+        document.getElementById("demo3").innerHTML += person.InfoWithDate() + " It is method Third";
+    </script>
+</body>
+
+</html>

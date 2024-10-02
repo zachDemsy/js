@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumberMethod</title>
+</head>
+
+<body>
+    <h2>toString() Returns a number as a string </h2>
+    <p id="demo1"></p>
+    <h2>toExponential () Returns a number written in Exponentail</h2>
+    <p>Exponentail value of 2 are as</p>
+    <p id="demo2"></p>
+    <h2>The toFixed()Methods Returns a number written with a number of decimals</h2>
+    <p id="demo3"></p>
+    <h3>The toPrecision() Returns a number written with a specified length</h3>
+    <p>Exponentail value of 2 are as</p>
+    <p id="demo4"></p>
+    <h2>the valueOf() Returns a number as a number</h2>
+    <p id="demo5"></p>
+    <script>
+        //ToString Returns a Number as a String
+        let x = 123;
+        document.getElementById("demo1").innerHTML =
+            x.toString() + "<br>" +
+            (123).toString() + "<br>" +
+            (100 + 23).toString();
+        document.getElementById('demo1').innerHTML += "<br>" + typeof x;
+        //  Exponentail
+        let y = 2;
+        document.getElementById('demo2').innerHTML += y.toExponential(2);
+        document.getElementById('demo2').innerHTML += "<br>" + y.toExponential(4);
+        document.getElementById('demo2').innerHTML += "<br>" + y.toExponential(6);
+        document.getElementById('demo2').innerHTML += "<br>" + y.toExponential(8);
+        //toFixed()
+        let z = 123.4567;
+        document.getElementById('demo3').innerHTML += z.toFixed(2);
+        document.getElementById('demo3').innerHTML += "<br>" + z.toFixed(4);
+        document.getElementById('demo3').innerHTML += "<br>" + z.toFixed(6);
+        document.getElementById('demo3').innerHTML += "<br>" + z.toFixed(8);
+        //ToPrecision
+        document.getElementById('demo4').innerHTML += "<br>" + x.toPrecision(2);
+        document.getElementById('demo4').innerHTML += "<br>" + x.toPrecision(4);
+        document.getElementById('demo4').innerHTML += "<br>" + x.toPrecision(6);
+        document.getElementById('demo4').innerHTML += "<br>" + x.toPrecision(8);
+        //valueOF
+        document.getElementById("demo5").innerHTML =
+            x.valueOf() + "<br>" +
+            (123).valueOf() + "<br>" +
+            (100 + 23).valueOf();
+    </script>
+</body>
+
+</html>

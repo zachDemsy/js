@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow</title>
+</head>
+
+<body>
+    <h1>Arrow functions</h1>
+    <p id="d"></p>
+    <button id="btn">Click Me!</button>
+    <script>
+        //arrow with paremeter 
+        let Hello = "";
+        Hello = (val) => "Hello " + val;
+        hello1 = val => "hello " + val;
+        document.getElementById("d").innerHTML += "<h2>With paremeter</h2> <br>" + Hello("world");
+        document.getElementById("d").innerHTML += "<h2>Without paremeter</h2> <br>" + hello1("university");
+        let hello = "";
+        hello = () => {
+            document.getElementById("d").innerHTML += "<br>" + this;
+        }
+        window.addEventListener("load", hello);
+        document.getElementById("btn").addEventListener("click", hello);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathrandom</title>
+</head>
+
+<body>
+    <h2>Random</h2>
+    <p id="d1"></p>
+    <h2>A proper Random Function</h2>
+    <p id="d2"></p>
+    <script>
+        //Math.random
+        var a = Math.random();
+        document.getElementById("d1").innerHTML += "The Math random is " + a;
+        //Math.random with math.floor
+        var b = Math.floor(Math.random() * 1000) + 1;
+        document.getElementById("d1").innerHTML += "<br>The MAth.random with Math.floor is " + b;
+        //Proper Random function
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var c = random(0, 100000)
+        document.getElementById("d2").innerHTML += "The proper random Function is " + c;
+    </script>
+</body>
+
+</html>

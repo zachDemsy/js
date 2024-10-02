@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+
+<body>
+    <h2>JavaScript Arithmetic Operators</h2>
+    <ol>
+        <li>Assignment Operators <b> =</b></li>
+        <li>Addition Operators <b> +</b></li>
+        <li>Mutiplication Operators <b>*</b></li>
+        <li>Comparison Operators <b> ></b></li>
+        <li>Exponentional Operators <b> **</b></li>
+        <li>Division Operators <b> /</b></li>
+        <li>modulus Operators <b> %</b></li>
+        <li>increment Operators <b> ++</b></li>
+        <li>decrement Operators <b> --</b></li>
+    </ol>
+    <p>Example are as follow</p>
+    <div id="operators"></div>
+    <script>
+        // Assignment Operators
+        let x = 10;
+        let y = 20;
+        document.getElementById('operators').innerHTML += "The x " + x + " and y " + y + " they use the Assignment Operators <br>";
+        //Addition Operators
+        let a = x + y;
+        document.getElementById('operators').innerHTML += "The a is Using the Addition Operator " + a + "<br>";
+        //Mutiplication Operators
+        let b = x * y;
+        document.getElementById('operators').innerHTML += "The b is Using the Multiplication Operators " + b + "<br>";
+        //Exponentional Operators
+        let c = x ** y;
+        document.getElementById('operators').innerHTML += "The c is Using the Exponentional  Operators " + c + "<br>";
+        //Comparison Operators
+        let d = x > y;
+        document.getElementById('operators').innerHTML += "The d is Using the Comparison Operators " + d + "<br>";
+        //division Operators
+        let e = x / y;
+        document.getElementById('operators').innerHTML += "The e is Using the division Operators " + e + "<br>";
+        //modulus Operators
+        let f = x % y;
+        document.getElementById('operators').innerHTML += "The f is Using the modulus Operators " + f + "<br>";
+        //increment Operators
+        let g = x++;
+        document.getElementById('operators').innerHTML += "The g is Using the increment Operators " + g + "<br>";
+        //decrement Operator
+        let h = x--;
+        document.getElementById('operators').innerHTML += "The h is Using the decrement Operators " + h + "<br>";
+    </script>
+</body>
+
+</html>

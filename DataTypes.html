@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatype</title>
+</head>
+<h2>Datatype in JavaScript</h2>
+<ol>
+    <li>number</li>
+    <li>string</li>
+    <li>Booleans</li>
+    <li>object</li>
+    <li>array</li>
+    <li>Date</li>
+</ol>
+<div id="datatype"></div>
+<script>
+    // Numbers:
+    let length = 16;
+    let weight = 7.5;
+    document.getElementById('datatype').innerHTML += "datatype Number length " + length + " weight" + weight + "<br>";
+    // Strings:
+    let color = "Yellow";
+    let lastName = "Johnson";
+    document.getElementById('datatype').innerHTML += "datatype String Color " + color + " lastName " + lastName + "<br>";
+    // Booleans
+    let x = true;
+    let y = false;
+    document.getElementById('datatype').innerHTML += "datatype Booleans x " + x + " y " + y + "<br>";
+    // Object:
+    const person = {
+        firstName: "John",
+        lastName: "Doe"
+    };
+    document.getElementById('datatype').innerHTML += "datatype Object firstName " + person.firstName + " lastname " + person.lastName + "<br>";
+    // Array object:
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById('datatype').innerHTML += "datatype Array cars is " + cars + "<br>";
+    // Date object:
+    const date = new Date();
+    document.getElementById('datatype').innerHTML += "datatype Date is " + date + "<br>";
+    //typeOf:
+    document.getElementById('datatype').innerHTML += "datatype typeof FirstName= " + typeof person.firstName + "<br>" + " typeof lenghts = " + typeof length;
+</script>
+
+<body>
+</body>
+
+</html>

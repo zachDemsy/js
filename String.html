@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+    <h2>JavaScript String Methods</h2>
+    <p>String can be written with the double quotes and single quotes</p>
+    <div id="String"></div>
+    <h2>String quotes inside a string</h2>
+    <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+    <p id="string2"></p>
+    <h2>backslash before quotes accepts quotes as Quotes</h2>
+    <p id="String3"></p>
+    <h2>String length</h2>
+    <p></p>
+    <p id="String4"></p>
+    <h2>break a code line with backslash</h2>
+    <p id="string5"></p>
+    <h2>Find the position of the string</h2>
+    <p>Luffy is the one of the prirates of the East Blue. And belong to the D. family</p>
+    <p id="string6"></p>
+    <h2>Search of the text in the string </h2>
+    <p>Click the button to perfom a global (/g) search for the letters "ain" (/ain) in a string, and display the matches.</p>
+    <p>The rain in SPAIN stays mainly in the plain</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="string7"></p>
+    <h2>Replace</h2>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <p id="str">Please visit Microsoft!</p>
+    <button onclick="myFunction1()">Try it</button>
+    <h2>Convert string to upper case & lower case</h2>
+    <button onclick="myFunction2()">Try To UpperCase</button>
+    <button onclick="myFunction3()">Try To LowerCase</button>
+    <p id="str1">Hello World!</p>
+    <p>Display the first array element, after a string split:</p>
+    <p>Array is a,b,c,d,e,f</p>
+    <p id="demo"></p>
+    <h2>String Trim</h2>
+    <p> Hello World i</p>
+    <p id="demo1"></p>
+    <script>
+        var a = "JaveScript using Double Quotes";
+        var b = 'JavaScript using Single Quotes';
+        //String quotes inside a string
+        document.getElementById('String').innerHTML = a + '<br>' + b;
+        let x = "'One price' is a one of the Big three manga";
+        let y = '"naruto" is a one of the Big three manga';
+        document.getElementById('string2').innerHTML = x + '<br>' + y;
+        //backslash before quotes accepts quotes as Quotes
+        let c = "It\'s alright";
+        let d = "We are the so-called\"Vikings\"from the north";
+        document.getElementById('String3').innerHTML = c + '<br>' + d;
+        //String Length
+        let name = "Roronoa Zoro ";
+        document.getElementById('String4').innerHTML = name.length;
+        //breake the a code line With Backslash
+        let e = "hello \
+        My friends ";
+        document.getElementById('string5').innerHTML = e;
+        let f = "Luffy is the one of the prirates of the East Blue. And belong to the D. family";
+        let g = f.indexOf("one");
+        document.getElementById('string6').innerHTML = g;
+        //String match
+        function myFunction() {
+            var str = "The rain in SPAIN stays mainly in the plain";
+            var res = str.match(/ain/g);
+            document.getElementById("string7").innerHTML = res;
+        };
+        //String replace
+        function myFunction1() {
+            let text = document.getElementById("str").innerHTML;
+            document.getElementById("str").innerHTML =
+                text.replace("Microsoft", "W3Schools");
+        };
+        //String to upper case
+        function myFunction2() {
+            let text = document.getElementById("str1").innerHTML;
+            document.getElementById("str1").innerHTML =
+                text.toUpperCase();
+        };
+        //String to lower Case
+        function myFunction3() {
+            let text = document.getElementById("str1").innerHTML;
+            document.getElementById("str1").innerHTML =
+                text.toLowerCase();
+        };
+        let text = "a,b,c,d,e,f";
+        const myArray = text.split(",");
+        document.getElementById("demo").innerHTML = myArray[2];
+        //String trim
+        let text1 = "   Hello World   ";
+        document.getElementById("demo1").innerHTML = text1.trim();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+
+<body>
+    <h1>Regular Expression</h1>
+    <p id="d1"></p>
+    <script>
+        //Using String Search with Regular Expression 
+        var str = "Hello, World!";
+        var p = str.search(/world/i);
+        document.getElementById('d1').innerHTML += "<h2>Using String Search with Regular Expression</h2><br>" + p;
+        //Using String Replace with Regular Expression
+        let replace = str.replace('World', 'Zach');
+        document.getElementById('d1').innerHTML += "<h2>Using String Replace with Regular Expression</h2><br>" + replace;
+        //Using tst
+        var str1 = "Zach demsey says the best feeling of the life is free";
+        var regex = /free/gi;
+        document.getElementById('d1').innerHTML += "<h2>Using Test with Regular Expression</h2><br><p>Zach demsey says the best feeling of the life is free</p><br> The test pattern is =Free<br>" + regex.test(str1);
+        //Using exce()"
+        const obj = /e/.exec("The best things in life are free!");
+        document.getElementById("d1").innerHTML += "<h2>Using Test with Regular Expression</h2><br>" +
+            "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+    </script>
+</body>
+
+</html>

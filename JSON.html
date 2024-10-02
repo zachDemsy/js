@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+    <h2>Create Object from JSON String</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = '{"employees":[' +
+            '{"firstName":"John","lastName":"Doe" },' +
+            '{"firstName":"Anna","lastName":"Smith" },' +
+            '{"firstName":"Peter","lastName":"Jones" }]}';
+
+        const obj = JSON.parse(text);
+        let employeeList = "";
+        for (let i = 0; i < obj.employees.length; i++) {
+            employeeList += obj.employees[i].firstName + " " + obj.employees[i].lastName + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = employeeList;
+    </script>
+</body>
+
+</html>

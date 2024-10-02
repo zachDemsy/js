@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+
+<body>
+    <h1>Number JavaScript</h1>
+    <p>Number can be written with or without decimal</p>
+    <div id="demo"></div>
+    <h2>MAX_SAFE_INTERGER</h2>
+    <p id="demo2"></p>
+    <h2>MIN_SAFE_INTERGER</h2>
+    <p id="demo3"></p>
+    <H2>Number isInterger</H2>
+    <p>a=10 and b=10.5</p>
+    <p id="demo4"></p>
+    <h2>Number.isSafeInteger()Method</h2>
+    <p id="demo5"></p>
+    <h2>Number.EPSILON() method</h2>
+    <p> The difference between 1 and the smallest number > 1.</p>
+    <p id="demo6"></p>
+    <h2>Number.Max_Value</h2>
+    <p>The largest possible number in JavaScript is:</p>
+    <p id="demo7"></p>
+    <h2>Number.MIN_Value</h2>
+    <p>The smallest possible number in JavaScript is:</p>
+    <p id="demo8"></p>
+    <h2>POSITIVE POSITIVE_INFINITY</h2>
+    <p>The POSITIVE_INFINITY number in JavaScript is:</p>
+    <p id="demo9"></p>
+    <h2>Negative_Infinity</h2>
+    <p>The NEGATIVE_INFINITY number in JavaScript is:</p>
+    <p id="demo10"></p>
+    <h2>NaN "Not a Number"</h2>
+    <p id="demo11"></p>
+    <script>
+        // Number can be written with or without decimal
+        var num1 = 10; // integer
+        var num2 = 10.5; // float
+        document.getElementById('demo').innerHTML = num1 + "<br>" + num2;
+        //MAX_SAFE_INTERGER
+        let x = Number.MAX_SAFE_INTEGER;
+        document.getElementById('demo2').innerHTML = x + "is X <br>";
+        //MIN_SAFE_INTERGER
+        let y = Number.MIN_SAFE_INTEGER;
+        document.getElementById('demo3').innerHTML = y + "Is Y <br>";
+        //isInterger
+        document.getElementById("demo4").innerHTML = Number.isInteger(num1) + " Interger <br>" + Number.isInteger(num2) + "Interger" + " IT is a " + typeof num2;
+        // isSafeInteger
+        document.getElementById("demo5").innerHTML = Number.isSafeInteger(x) + " <br> ";
+        document.getElementById("demo5").innerHTML = Number.isSafeInteger(num1) + " Safe Inter <br>";
+        //EPSILON
+        let a = Number.EPSILON;
+        document.getElementById("demo6").innerHTML = a + " EPSILON <br>";
+        //MAX_Value INTERGER
+        let b = Number.MAX_VALUE;
+        document.getElementById("demo7").innerHTML = b + " MAX Value <br>";
+        //MIN_Value INTERGER
+        let c = Number.MIN_VALUE;
+        document.getElementById("demo8").innerHTML = c + " MIN Value <br>";
+        //POSITIVE_Infinity
+        let d = Number.POSITIVE_INFINITY;
+        document.getElementById("demo9").innerHTML = d + " POSITIVE_Infinity <br>";
+        //Negative_Infinity
+        let e = Number.NEGATIVE_INFINITY;
+        document.getElementById("demo10").innerHTML = e + "Negative_Infinity <br>";
+        //NaN
+        let f = Number.NaN;
+        document.getElementById("demo11").innerHTML = f + " NaN <br>";
+    </script>
+</body>
+
+</html>

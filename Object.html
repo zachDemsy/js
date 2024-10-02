@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <h2>JavaScript Objects</h2>
+    <p>Create an Object</p>
+    <div id="demo">
+    </div>
+    <script>
+        // Create an object
+        var person = new Object();
+        //objectName.property
+        person.name = "John";
+        person.age = 50;
+        person.lastname = "deo";
+        //objectName [property]
+        person["city"] = "New York";
+
+        document.getElementById('demo').innerHTML += person + "<br>";
+        document.getElementById('demo').innerHTML += person.name + " IT IS A Person.Name" + "<br>";
+        document.getElementById('demo').innerHTML += person.age + " IT IS A Person.Age" + "<br>";
+        document.getElementById('demo').innerHTML += person.city + " IT IS A Person.city" + "<br>";
+    </script>
+    <p id="carInfo"></p>
+
+    <script>
+        // Object representing a car
+        let car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020
+        };
+
+        // Variable holding the property name we want to access dynamically
+        let x = "model";
+
+        // Access the property using bracket notation
+        let model = car[x];
+        document.getElementById("carInfo").innerHTML = "Car Model: " + model;
+        delete car.year;
+        document.getElementById("carInfo").innerHTML += "<br>Car Year: " + car.year;
+        // Convert the object to a string
+        let carInfo = JSON.stringify(car);
+        document.getElementById("carInfo").innerHTML += "<br>Car Info: " + carInfo;
+    </script>
+</body>
+
+</html>

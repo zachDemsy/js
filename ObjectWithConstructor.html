@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object with Constructor</title>
+</head>
+
+<body>
+    <h2>Object with constructor</h2>
+    <p id="demo"></p>
+    <h2>Object with addting new Method(Add prototype is complasary)</h2>
+    <p id="demo2"></p>
+    <script>
+        // Define a constructor function
+        function Person(first, last, age, country) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.CountryName = country;
+
+            // Method to return full name
+            this.fullName = function() {
+                return this.firstName + " " + this.lastName + "<br>";
+            };
+
+            // Method to return more detailed info
+            this.info = function() {
+                return this.firstName + " " + this.lastName + " is " + this.age + " years old and lives in " + this.CountryName + "<br>";
+            };
+        };
+
+        // Create a new person object
+        const information = new Person("Naruto", "Uzumaki", 18, "Japan");
+
+        // Display the full name and info
+        document.getElementById('demo').innerHTML += information.fullName();
+        document.getElementById('demo').innerHTML += information.info();
+        // Correct the prototype method definition
+        Person.prototype.changeInformation = function(name, last, a, country) {
+            this.firstName = name;
+            this.lastName = last;
+            this.age = a;
+            this.CountryName = country;
+        };
+
+        // Change the information using the new method
+        information.changeInformation('Monkey D', 'Luffy', 19, 'East Blue');
+
+        // Display the updated name and info in another element
+        document.getElementById('demo2').innerHTML += information.fullName();
+        document.getElementById('demo2').innerHTML += information.info();
+    </script>
+</body>
+
+</html>

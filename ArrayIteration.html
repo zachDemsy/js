@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayIteration</title>
+</head>
+
+<body>
+    <h2>Foreach()</h2>
+    <p id="d1"></p>
+    <h2>map()</h2>
+    <p id="d2"></p>
+    <h2>Flatmap()</h2>
+    <p id="d3"></p>
+    <h2>Fiter()</h2>
+    <p id="d4"></p>
+    <h2>Every()</h2>
+    <p id="d5"></p>
+    <h2>Some()</h2>
+    <p id="d6"></p>
+    <h2>Array Key()</h2>
+    <p id="d7"></p>
+    <h2>Array Entries()</h2>
+    <p id="d8"></p>
+    <h2>Array with()</h2>
+    <p id="d9"></p>
+    <h2>Array spread</h2>
+    <p id="d10"></p>
+    <script>
+        //foreach()
+        const number = [34, 45, 67, 89, 43, 64, 654];
+        let print = " ";
+        number.forEach(PrintEach);
+        document.getElementById('d1').innerHTML = print;
+
+        function PrintEach(value, index, array) {
+            print += value + ", ";
+        }
+        //map()
+        const print2 = number.map(Printmap);
+
+        function Printmap(value, index, array) {
+            return value * 2 + " ";
+        }
+        document.getElementById('d2').innerHTML = print2;
+        //Flatmap()
+        const print3 = number.flatMap(x => [x, x * 10] + "<br>");
+        document.getElementById('d3').innerHTML = print3;
+        //filter()
+        const print4 = number.filter(x => x > 50);
+        document.getElementById('d4').innerHTML = print4;
+        //every()
+        const print5 = number.every(x => x > 50);
+        document.getElementById('d5').innerHTML = print5;
+        //some()
+        const print6 = number.some(x => x > 50);
+        document.getElementById('d6').innerHTML = print6;
+        //Array_Key()
+        let print7 = "";
+        const key = number.keys();
+        for (const x of key) {
+            print7 += x + "<br>";
+        }
+        document.getElementById('d7').innerHTML = print7;
+        //Array Entries()
+        let print8 = "";
+        const entries = number.entries();
+        for (const x of entries) {
+            document.getElementById('d8').innerHTML += x + "<br>";
+        }
+        //with()
+        const print9 = number.with(3, 4);
+        document.getElementById('d9').innerHTML = print9;
+        //spreed()
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "May"];
+        const year = [...q1, ...q2, ...q3, ...q4];
+        document.getElementById("d10").innerHTML = year;
+    </script>
+</body>
+
+</html>

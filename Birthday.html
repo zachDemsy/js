@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Birthday Calculator</h1>
+    <label for="birthday">Enter your birthday:</label>
+    <input type="date" id="birthday" required>
+    <button onclick="calculateAge()">Calculate</button>
+
+    <div class="result">
+        <p id="age"></p>
+        <p id="minutes"></p>
+    </div>
+
+    <script>
+        function calculateAge() {
+            const birthday = document.getElementById('birthday').value;
+            if (!birthday) {
+                alert("Please enter a valid date.");
+                return;
+            }
+
+            const birthDate = new Date(birthday);
+            const now = new Date();
+
+            const ageInMilliseconds = now - birthDate;
+            const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Considering leap years
+            const ageInMinutes = ageInMilliseconds / (1000 * 60);
+
+            document.getElementById('age').innerText = "You are " + Math.floor(ageInYears) + " years old.";
+            document.getElementById('minutes').innerText = "You have lived for " + Math.floor(ageInMinutes).toLocaleString() + " minutes.";
+        }
+
+        // Update the minutes live every second
+        setInterval(function() {
+            const birthday = document.getElementById('birthday').value;
+            if (birthday) {
+                calculateAge();
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

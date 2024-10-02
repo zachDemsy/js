@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Sort</title>
+</head>
+
+<body>
+    <h1>alpabetics Sort</h1>
+    <h2>Array_sort()</h2>
+    <p id="d1"></p>
+    <h2>Array_reversed()</h2>
+    <p id="d2"></p>
+    <h2>Array_Sorted()</h2>
+    <p id="d3"></p>
+    <h1>Numberic Sort</h1>
+    <p id="d4"></p>
+    <button onclick="myFunction()">For Random()</button>
+    <h2>Object Sort</h2>
+    <p id="d5"></p>
+
+
+    <script>
+        //Sort
+        var arr = [1, 5, 3, 7, 2, 4];
+        const fruits = ["Banana", "Apple", "Kiwi", "Mangoes"];
+        const fruitsSort = fruits.sort();
+        var arrSort = arr.sort();
+        document.getElementById('d1').innerHTML = "The Frunits are Sort by alpabetics is " + fruitsSort + "<br> The Number sort is " + arrSort;
+        //Reverse
+        var arrReversed = arr.reverse();
+        var fruitsrevers = fruits.reverse();
+        document.getElementById('d2').innerHTML = "The Fruits are revered sort by alpabetics is " + fruitsrevers + "<br> The Number reverse is " + arrReversed;
+        //Soreted
+        const arrSorted = arr.toSorted();
+        const fruitsSorted = fruits.toSorted();
+        document.getElementById('d3').innerHTML = "The Number sorted is " + arrSorted + "<br> The Fruits is sorted is " + fruitsSorted;
+        //NumberSort
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("d4").innerHTML += points;
+        points.sort(function(a, b) {
+            return a - b
+        });
+        document.getElementById("d4").innerHTML += "<br> Normal Sort " + points;
+        //Sort With MAth.Random()
+        function myFunction() {
+            points.sort(function() {
+                return 0.5 - Math.random()
+            });
+            document.getElementById("d4").innerHTML += "<br> Sort With Math.Random " + points;
+        }
+        //Sort With Math.min()
+        document.getElementById("d4").innerHTML += "<br> The Sort with Math.Min Function is " + myArrayMin(points);
+
+        function myArrayMin(arr) {
+            return Math.min.apply(null, arr);
+        }
+        //Sort with Math.MAX
+        document.getElementById("d4").innerHTML += "<br> The Sort with Math.Max Function is " + myArrayMax(points);
+
+        function myArrayMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+        //Object  Sort
+        const cars = [{
+            "model": "BMW",
+            "year": 2010,
+            "color": "red"
+        }, {
+            "model": "Ferrari",
+            "year": 2005,
+            "color": "blue",
+        }, {
+            "model": "Toyota",
+            "year": 2015,
+            "color": "green",
+        }, {
+            "model": "Mercedes",
+            "year": 2012,
+            "color": "yellow",
+        }, {
+            "model": "Honda",
+            "year": 2018,
+            "color": "black",
+        }]
+        document.getElementById("d5").innerHTML += JSON.stringify(cars) + "<br>";
+
+        cars.sort(function(a, b) {
+            return a.year - b.year
+        });
+        displayCars();
+
+        function displayCars() {
+            document.getElementById("d5").innerHTML = ""; // Clear previous content
+            for (let i = 0; i < cars.length; i++) {
+                document.getElementById("d5").innerHTML +=
+                    cars[i].model + " " + cars[i].year + " " + cars[i].color + " " + "<br>";
+            }
+        }
+    </script>
+</body>
+
+</html>

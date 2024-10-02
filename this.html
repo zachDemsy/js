@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+
+<body>
+    <h1>This Keyword</h1>
+    <p id="d1"></p>
+    <h2>this in Event handlers</h2>
+    <button onclick="this.style.display='none'">Click to Remove Me!</button>
+    <script>
+        //this KEyword with method
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("d1").innerHTML += "<h3>This keyword with method </h3> <br>" + person.fullName();
+        //alone This
+        let x = this;
+        document.getElementById("d1").innerHTML += "<h3>This keyword alone </h3> <br>" + x;
+        //this in a function
+        function myFunction() {
+            return this;
+        };
+        document.getElementById("d1").innerHTML += "<h3>This keyword in a Function </h3> <br>" + myFunction();
+        //object method building
+        const per = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            myFunction: function() {
+                return this;
+            }
+        };
+        document.getElementById("d1").innerHTML += "<h3>This keyword in a object method building </h3> <br>" + per.myFunction();
+        //Explicit fuction bindling
+        const person1 = {
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+        };
+        let a = person1.fullName.call(person2);
+        document.getElementById("d1").innerHTML += "<h3>Explicit function bindling </h3> <br>" + a;
+        //blid() 
+        const member = {
+            firstName: "Hege",
+            lastName: "Nilsen",
+        }
+
+        let fullName = person.fullName.bind(member);
+        document.getElementById("d1").innerHTML += "<h3>bind() </h3> <br>" + fullName();
+    </script>
+</body>
+
+</html>

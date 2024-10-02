@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayMethod</title>
+</head>
+
+<body>
+    <h2>JavaScript Array length</h2>
+    <p id="d1"></p>
+    <h2>JavaScript Array_at() position 2</h2>
+    <p id="d2"></p>
+    <h2>JavaScript Array_join() *</h2>
+    <p id="d3"></p>
+    <h2>JavaScript Array_pop()</h2>
+    <p id="d4"></p>
+    <h2>JavaScript Array_push()</h2>
+    <p id="d5"></p>
+    <script>
+        //Array Length
+        const Fruits = ['banana', 'orange', "apple", 'mango'];
+        let s = Fruits.length;
+        document.getElementById("d1").innerHTML = "The length of the array is " + s;
+        //Array_at()
+        document.getElementById('d2').innerHTML = "The 2 position items of fruits is " + Fruits[2];
+        //Array_join()
+        document.getElementById("d3").innerHTML = Fruits.join(" * ");
+        //Array_pop()
+        document.getElementById("d4").innerHTML = Fruits.pop();
+        //Array_push()
+        Fruits.push("grapes");
+        document.getElementById("d5").innerHTML = Fruits;
+    </script>
+</body>
+
+</html>

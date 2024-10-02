@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h2>Creating Array</h2>
+    <p id="d1"></p>
+    <h2>Using keyword new </h2>
+    <p id="d2"></p>
+    <h2>Chaning an Array Element</h2>
+    <p id="d3"></p>
+    <h2>Convert an Array to a String</h2>
+    <p id="d4"></p>
+    <h2>ArrayObject</h2>
+    <p id="d5"></p>
+    <h2>Associative Arrays</h2>
+    <p id="d6"></p>
+    <h2>Nested Arrays and Objects</h2>
+    <p id="d7"></p>
+    <script>
+        // Creating Array
+        const car = ["Saab", "Volvo", "BMW"];
+        document.getElementById("d1").innerHTML = car;
+        //USing Keyword New
+        const car1 = new Array("Saab", "Volvo", "BMW");
+        document.getElementById("d2").innerHTML = car1;
+        //Changing an Array to a String
+        car[0] = "Toyota";
+        document.getElementById("d3").innerHTML = car;
+        //Convert an Array to a String
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("d4").innerHTML = fruits.toString();
+        //Array Object
+        const person = {
+            FirstName: "John",
+            LastName: "Deo",
+            age: 46
+        };
+        document.getElementById('d5').innerHTML += person.FirstName;
+        //Associative Arrays
+        const fruits1 = ['Apple', 'Banana', 'Mango']; // Example array for fruits
+        const car2 = {
+            make: 'Toyota',
+            model: 'Corolla',
+            year: 2020
+        }; // Example object for car1
+        const person1 = [];
+        person1[0] = fruits1;
+        person1[1] = car2;
+        person1[2] = Date.now(); // Get the current timestamp
+
+        let text1 = "";
+
+        // Loop through the elements of the array
+        for (let i = 0; i < person1.length; i++) {
+            if (Array.isArray(person1[i])) {
+                // If it's an array, join the array elements
+                text1 += "Fruits: " + person1[i].join(", ") + "<br>";
+            } else if (typeof person1[i] === 'object') {
+                // If it's an object, display its properties
+                text1 += "Car: ";
+                for (let key in person1[i]) {
+                    text1 += key + ": " + person1[i][key] + " ";
+                }
+                text1 += "<br>";
+            } else {
+                // For other types like numbers (in this case, the timestamp)
+                text1 += "Timestamp: " + person1[i] + "<br>";
+            }
+        }
+        // Set the final output to the HTML element
+        document.getElementById('d6').innerHTML += text1;
+        //Nested Arrays and Objects
+        const myObj = {
+            name: "John",
+            age: 30,
+            car: [{
+                model: "Toyota",
+                year: 2010
+            }, {
+                model: "Honda",
+                year: 2015
+            }, {
+                model: "BMW",
+                year: 2018
+            }, ]
+        };
+
+        let details = "Name: " + myObj.name + "<br>" +
+            "Age: " + myObj.age + "<br>";
+
+        details += "Cars: <br>";
+
+        // Loop through the array of cars and append the details to the string
+        myObj.car.forEach(function(car, index) {
+            details += (index + 1) + ". Model: " + car.model + ", Year: " + car.year + "<br>";
+        });
+
+        // Output all details to the div
+        document.getElementById("d7").innerHTML = details;
+    </script>
+</body>
+
+</html>

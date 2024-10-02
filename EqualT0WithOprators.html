@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EqualToWithOperators</title>
+</head>
+
+<body>
+    <h2>The = (Equal to) operators with other operators</h2>
+    <div id="equal"></div>
+    <script>
+        let x = 10;
+        //addtion operators
+        x += 5;
+        document.getElementById('equal').innerHTML += "The += operators " + x + "<br>";
+        //subtraction operators
+        x -= 5;
+        document.getElementById('equal').innerHTML += "The -= operators " + x + "<br>";
+        //multipication
+        x *= 5;
+        document.getElementById('equal').innerHTML += "The *= operators " + x + "<br>";
+        //divison oprators
+        x /= 5;
+        document.getElementById('equal').innerHTML += "The /= operators " + x + "<br>";
+        //left shift
+        x <<= 5;
+        document.getElementById('equal').innerHTML += "The <<= operators " + x + "<br>";
+        //right shift
+        x >>= 5;
+        document.getElementById('equal').innerHTML += "The >>= operators " + x + "<br>";
+        //unsigned right shift
+        x >>>= 5;
+        document.getElementById('equal').innerHTML += "The >>>= operators " + x + "<br>";
+        //AND
+        x &= 5;
+        document.getElementById('equal').innerHTML += "The &= operators " + x + "<br>";
+        //OR
+        x |= 5;
+        document.getElementById('equal').innerHTML += "The ||= operators " + x + "<br>";
+        //XOR
+        x ^= 5;
+        document.getElementById('equal').innerHTML += "The ^= operators " + x + "<br>";
+        //modululase
+        x %= 5;
+        document.getElementById('equal').innerHTML += "The %= operators " + x + "<br>";
+    </script>
+</body>
+
+</html>

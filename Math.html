@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+
+<body>
+    <h2>Math Methods</h2>
+    <p id="d1"></p>
+    <script>
+        // Math.abs() - returns the absolute value of a number
+        var a = Math.abs(-5);
+        document.getElementById("d1").innerHTML = "The absolute value of -5 is " + a
+            //•	Math.round(x) Returns X rounded to its nearest integer
+        var b = Math.round(3.7);
+        document.getElementById("d1").innerHTML += "<br> and the round of 3.7 is " + b;
+        //•	Math.ceil(x) Returns the smallest integer that is greater than or equal to x
+        var c = Math.ceil(3.7);
+        document.getElementById("d1").innerHTML += "<br> and the ceil of 3.7 is " + c;
+        //Math.floor(x) Returns the  smallest integer that is smaller than or equal to x
+        var d = Math.floor(3.7);
+        document.getElementById("d1").innerHTML += "<br> and the floor of 3.7 is " + d;
+        //Math.trunc(x) Returns the integer part of x 
+        var e = Math.trunc(3.7);
+        document.getElementById("d1").innerHTML += "<br> and the trunc of 3.7 is " + e;
+        //•	Math.sign(x) Returns if x is negative, null or positive
+        var f = Math.sign(-5);
+        document.getElementById("d1").innerHTML += "<br> and the Sign of -5 is " + f;
+        //•	Math.pow(x) Returns the value of x to the power of y
+        var g = Math.pow(2, 3);
+        document.getElementById("d1").innerHTML += "<br> and 2 to the power of 3 is " + g;
+        //•	Math.sqrt(x)  Returns the square root of x
+        var h = Math.sqrt(16);
+        document.getElementById('d1').innerHTML += "<br> and the squre root of 16 is " + h;
+        //•	Math.sin(x) Returns the sine of angle x
+        var i = Math.sin(45);
+        document.getElementById('d1').innerHTML += "<br> and the value of sin 45  is " + i;
+        //•	Math.cos(x) returns the cosine of the angle x
+        var j = Math.cos(45);
+        document.getElementById('d1').innerHTML += "<br> and the value of cos 45  is " + j;
+        //•	Math.min(x)  and Math.max(x) can be used to find the lowest or highest value in a list of arguments
+        var k = Math.min();
+        var l = Math.max();
+        document.getElementById('d1').innerHTML += "<br> and the Math.min is " + k + " " + "<br> and the Math.max is " + l;
+        //•	Math.random() returns a random number between 0 , 1
+        var m = Math.random();
+        document.getElementById('d1').innerHTML += "<br> and the random number is " + m;
+        //•	Math.log(x) returns the natural logarithm of x
+        var n = Math.log(2);
+        document.getElementById('d1').innerHTML += "<br> and the natural logarithm of 2 is " + n;
+        //•	Math.log2(x) returns the base 2 logarithm of x.
+        var o = Math.log2(8);
+        document.getElementById('d1').innerHTML += "<br> and the base 2 logarithm of 8 is " + o;
+        //•	Math.log10(x) returns the base 10 lagarithm of x.
+        var p = Math.log10(100);
+        document.getElementById('d1').innerHTML += "<br> and the base 10 logarithm of 100 is " + p;
+    </script>
+</body>
+
+</html>

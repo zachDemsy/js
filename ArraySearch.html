@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArraySearch</title>
+</head>
+
+<body>
+    <h2>IndexOF()</h2>
+    <p id="d1"></p>
+    <h2>LastIndexOF()</h2>
+    <p id="d2"></p>
+    <h2>includes()</h2>
+    <p id="d3"></p>
+    <h2>Index_find()</h2>
+    <p id="d4"></p>
+    <h2>Index_FindIndex()</h2>
+    <p id="d5"></p>
+    <h2>Index_FindLast()</h2>
+    <p id="d6"></p>
+    <h2>Index_FindLAstIndex()</h2>
+    <p id="d7"></p>
+    <script>
+        //"Indexof Array"
+        var fruits = ["Apple", "Banana", "Cherry", "Date", ];
+        var index = fruits.indexOf("Banana");
+        document.getElementById("d1").innerHTML = "The index of Banana is " + index;
+        //LastIndex
+        var lastIndex = fruits.lastIndexOf("Banana") + 1;
+        document.getElementById('d2').innerHTML = "The index of Banana now is " + lastIndex;
+        //includes
+        var includes = fruits.includes("Banana");
+        document.getElementById('d3').innerHTML = "The includes is " + includes;
+        //Index _Find()
+        var index_find = fruits.indexOf("Banana");
+        document.getElementById('d4').innerHTML = "The Index of Banana is " + index_find;
+        //Index_FindIndex()
+        const numbers = [4, 9, 16, 25, 29];
+
+        document.getElementById("d5").innerHTML = "First number over 18 has index " + numbers.findIndex(myFunction);
+
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+        //Index_FindLast()
+        const temp = [27, 28, 30, 40, 42, 35, 30];
+        let high = temp.findLast(x => x > 40);
+        document.getElementById("d6").innerHTML = "the last temperature over 40 was " + high;
+        //FindLastIndex()
+        let pos = temp.findLastIndex(x => x > 40);
+        document.getElementById("d7").innerHTML = "the last temperature over 40 was at position " + pos;
+    </script>
+</body>
+
+</html>

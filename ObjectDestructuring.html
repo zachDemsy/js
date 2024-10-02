@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <h2>Object Destructuring</h2>
+    <p id="d1"></p>
+    <h2>String Destructuring</h2>
+    <p id="d2"></p>
+    <h2>Array Destructuring</h2>
+    <p id="d3"></p>
+    <script>
+        // Object Destructuring
+        const car = {
+            modal: "toyota",
+            year: 2018,
+        }
+        let {
+            modal,
+            year
+        } = car;
+        document.getElementById("d1").innerHTML += modal + " " + year;
+        //object default value
+        const person = {
+            name: "john",
+            age: 25
+        }
+        let {
+            name,
+            age,
+            country = "US"
+        } = person
+        document.getElementById("d1").innerHTML += "<br>" + name + " " + age + " " + country;
+        //object propert Alias
+        let {
+            modal: carName
+        } = car;
+        document.getElementById("d1").innerHTML += "<br>" + carName;
+        //String Destructuring
+        let StringName = "ZachDemsey";
+        let [a1, a2, a3, a4, a5] = StringName;
+        document.getElementById("d2").innerHTML += "<br>" + a1 + "<br>" + a2 + "<br>" + a3 + "<br>" + a4;
+        //Array Destructing
+        const fruits = ["Banana", "Kiwi", "Mango", "Oranges"];
+        let [fruit1, fruit2, fruit3, fruit4] = fruits;
+        document.getElementById("d3").innerHTML += fruit1 + "<br>" + fruit2 + "<br>" + fruit3 + "<br>" + fruit4 + "<br>";
+        //skip Array Value
+        let [fruitName1, , , fruitName2] = fruits
+        document.getElementById("d3").innerHTML += "<h3>Skip Array Value</h3>" + fruitName1 + "<br>" + fruitName2;
+        //array Position Value
+        let {
+            [0]: furtname1, [1]: furtname2, [2]: furtname3
+        } = fruits;
+        document.getElementById("d3").innerHTML += "<h3>Array Position Value</h3>" + furtname1 + "<br>" + furtname2 + "<br>" + furtname3;
+        //rest array position
+        let [
+            a,
+            b,
+            ...rest
+        ] = fruits;
+        document.getElementById("d3").innerHTML += "<h3>Rest Array Position</h3>" + "a is" + a + "<br> b is" + b + "<br>rest is " + rest;
+        //Destructings Maps
+        const map = new Map([
+            ['apples', 500],
+            ['bananas', 600],
+            ['oranges', 200]
+        ]);
+        let text = "";
+        for (const [key, value] of map) {
+            text += "<p>" + key + " is " + value;
+        }
+        document.getElementById('d3').innerHTML += "<br> <h2>Destrucrings Maps</h2>" + text;
+        //swapping JS variables
+        let firstName = "John";
+        let lastName = "Doe";
+        document.getElementById('d3').innerHTML += " <h2>Swapping JS Variables</h2>" + " before swapping fristName is " + firstName + "<br> lastName is " + lastName;
+        [firstName, lastName] = [lastName, firstName];
+        document.getElementById('d3').innerHTML += "<br> After swapping fristName is " + firstName + "<br> lastName is " + lastName;
+    </script>
+</body>
+
+</html>

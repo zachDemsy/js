@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeOF</title>
+</head>
+
+<body>
+    <h2>The typeof Operator</h2>
+
+    <p>The typeof operator returns the type of a variable or an expression:</p>
+    <h2>The void Operator</h2>
+    <p><a href="javascript:void(0);">Useless link</a></p>
+    <p><a href="javascript:void(document.body.style.backgroundColor='red');">Click me to change the background color of body to red.</a></p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML +=
+            "'John' is " + typeof "John" + "<br><br>" +
+            "('John' + 'Doe') is " + typeof("John" + "Doe") + "<br><br>" +
+            "3.14 is " + typeof 3.14 + "<br><br>" +
+            "33 is " + typeof(33 + 66) + "<br><br>" +
+            "(33 + 66) is " + typeof 33 + "<br><br>" +
+            "NaN is " + typeof NaN + "<br><br>" +
+            "true is " + typeof true + "<br><br>" +
+            "false is " + typeof false + "<br><br>" +
+            "1234n is " + typeof 1234 + "<br><br>" +
+            "Symbol() is " + typeof Symbol() + "<br><br>" +
+            "x is " + typeof x + "<br><br>" +
+            "null is " + typeof null;
+        //undefine or null differnce
+        document.getElementById("demo").innerHTML +=
+            "<p>The typeof undefined is " + typeof undefined +
+            "<p>The typeof null is " + typeof null +
+            "<p>(null === undefined) is " + (null === undefined) +
+            "<p>(null == undefined) is " + (null == undefined);
+        //Constructor Property
+        document.getElementById("demo").innerHTML +=
+            "john".constructor + "<br>" +
+            (3.14).constructor + "<br>" +
+            false.constructor + "<br>" +
+            new Date().constructor + "<br>" +
+            new Set().constructor + "<br>" +
+            new Map().constructor + "<br>" +
+            function() {}.constructor;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeConvertion</title>
+</head>
+
+<body>
+    <h2>typeConvertion</h2>
+    <p id="d1"></p>
+    <script>
+        //convert string to number
+        document.getElementById("d1").innerHTML +=
+            Number("3.14") + "<br>" +
+            Number(Math.PI) + "<br>" +
+            Number("    ") + "<br>" +
+            Number("") + "<br>" +
+            Number("99 88") + "<br>" +
+            Number("John") + "<br>";
+        //Convert number to string
+        let x = 123;
+        document.getElementById("d1").innerHTML +=
+            String(x) + "<br>" +
+            String(123) + "<br>" +
+            String(100 + 23);
+        //convert Dates to Numbers
+        var d = new Date();
+        document.getElementById("d1").innerHTML += Number(d);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjectDisplay</title>
+</head>
+
+<body>
+    <h2>Display Object </h2>
+    <h3>using Loop</h3>
+    <p id="demo"></p>
+    <h3>using Object.value</h3>
+    <p id="demo2"></p>
+    <h3>using object.entity</h3>
+    <p id="demo3"></p>
+    <h3>using JSON.stringify()</h3>
+    <p id="demo4"></p>
+    <script>
+        //object1 created
+        let car = {
+            name: "ford",
+            modal: "Gt",
+            year: "1985"
+        }
+        let info = "";
+        //looping through object
+        for (let x in car) {
+            info += car[x] + " <br>"
+        }
+        document.getElementById("demo").innerHTML = info;
+        //object2 created
+        let car2 = {
+            name: "ford",
+            model: "mustang",
+            year: 1975
+        }
+        const info2 = Object.values(car2)
+        document.getElementById('demo2').innerHTML += info2;
+        //object3 created 
+        let car3 = {
+            name: 'Toyota',
+            model: 'Camry',
+            year: 2000
+        }
+        let info3 = " ";
+        for (let [carInfo, value] of Object.entries(car3)) {
+            info3 += carInfo + " :" + value + "<br>";
+        }
+        document.getElementById('demo3').innerHTML += info3;
+        let car4 = {
+            name: 'Toyota',
+            model: 'Carola',
+            year: 2000
+        }
+        let info4 = JSON.stringify(car4);
+        document.getElementById('demo4').innerHTML += info4;
+    </script>
+</body>
+
+</html>
